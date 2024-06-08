@@ -491,156 +491,6 @@
             ]
           },
           {
-            "description": "Hyper Key + k",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "hold_down_milliseconds": 1,
-                    "key_code": "k",
-                    "modifiers": [
-                      "right_alt"
-                    ],
-                    "repeat": false
-                  },
-                  {
-                    "halt": false,
-                    "key_code": "k",
-                    "lazy": true,
-                    "repeat": false
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "k",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper",
-                    "value": 1
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Hyper Key + i",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "hold_down_milliseconds": 1,
-                    "key_code": "grave_accent_and_tilde",
-                    "modifiers": [
-                      "right_option"
-                    ],
-                    "repeat": false
-                  },
-                  {
-                    "halt": false,
-                    "key_code": "i",
-                    "lazy": true,
-                    "repeat": false
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "i",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper",
-                    "value": 1
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Hyper Key + a",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "hold_down_milliseconds": 1,
-                    "key_code": "grave_accent_and_tilde",
-                    "modifiers": [
-                      "right_option"
-                    ],
-                    "repeat": false
-                  },
-                  {
-                    "halt": false,
-                    "key_code": "a",
-                    "lazy": true,
-                    "repeat": false
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "a",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper",
-                    "value": 1
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Hyper Key + c",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "hold_down_milliseconds": 1,
-                    "key_code": "c",
-                    "modifiers": [
-                      "right_option"
-                    ],
-                    "repeat": false
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "c",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper",
-                    "value": 1
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "description": "Hyper Key + spacebar",
             "manipulators": [
               {
@@ -702,26 +552,6 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_k",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_i",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_a",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_c",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
                     "name": "hyper_sublayer_spacebar",
                     "value": 0
                   },
@@ -743,6 +573,26 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_f",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_k",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_i",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_c",
                     "value": 0
                   },
                   {
@@ -883,26 +733,6 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_k",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_i",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_a",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_c",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
                     "name": "hyper_sublayer_spacebar",
                     "value": 0
                   },
@@ -924,6 +754,26 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_f",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_k",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_i",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_c",
                     "value": 0
                   },
                   {
@@ -1256,26 +1106,6 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_k",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_i",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_a",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_c",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
                     "name": "hyper_sublayer_spacebar",
                     "value": 0
                   },
@@ -1297,6 +1127,26 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_f",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_k",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_i",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_c",
                     "value": 0
                   },
                   {
@@ -1792,26 +1642,6 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_k",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_i",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_a",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_c",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
                     "name": "hyper_sublayer_spacebar",
                     "value": 0
                   },
@@ -1833,6 +1663,26 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_f",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_k",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_i",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_c",
                     "value": 0
                   },
                   {
@@ -2045,26 +1895,6 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_k",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_i",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_a",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_c",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
                     "name": "hyper_sublayer_spacebar",
                     "value": 0
                   },
@@ -2086,6 +1916,26 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_s",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_k",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_i",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_c",
                     "value": 0
                   },
                   {
@@ -2283,6 +2133,156 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_f",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Hyper Key + k",
+            "manipulators": [
+              {
+                "to": [
+                  {
+                    "hold_down_milliseconds": 1,
+                    "key_code": "k",
+                    "modifiers": [
+                      "right_alt"
+                    ],
+                    "repeat": false
+                  },
+                  {
+                    "halt": false,
+                    "key_code": "k",
+                    "lazy": true,
+                    "repeat": false
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Hyper Key + i",
+            "manipulators": [
+              {
+                "to": [
+                  {
+                    "hold_down_milliseconds": 1,
+                    "key_code": "grave_accent_and_tilde",
+                    "modifiers": [
+                      "right_option"
+                    ],
+                    "repeat": false
+                  },
+                  {
+                    "halt": false,
+                    "key_code": "i",
+                    "lazy": true,
+                    "repeat": false
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "i",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Hyper Key + a",
+            "manipulators": [
+              {
+                "to": [
+                  {
+                    "hold_down_milliseconds": 1,
+                    "key_code": "grave_accent_and_tilde",
+                    "modifiers": [
+                      "right_option"
+                    ],
+                    "repeat": false
+                  },
+                  {
+                    "halt": false,
+                    "key_code": "a",
+                    "lazy": true,
+                    "repeat": false
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "a",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Hyper Key + c",
+            "manipulators": [
+              {
+                "to": [
+                  {
+                    "hold_down_milliseconds": 1,
+                    "key_code": "c",
+                    "modifiers": [
+                      "right_option"
+                    ],
+                    "repeat": false
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "c",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper",
                     "value": 1
                   }
                 ]

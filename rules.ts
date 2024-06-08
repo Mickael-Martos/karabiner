@@ -382,66 +382,7 @@ const rules: KarabinerRules[] = [
     ],
   },
   ...createHyperSubLayers({
-    k: {
-      to: [
-        {
-          hold_down_milliseconds: 1,
-          key_code: "k",
-          modifiers: ["right_alt"],
-          repeat: false,
-        },
-        {
-          halt: false,
-          key_code: "k",
-          lazy: true,
-          repeat: false,
-        },
-      ],
-    },
-    i: {
-      to: [
-        {
-          hold_down_milliseconds: 1,
-          key_code: "grave_accent_and_tilde",
-          modifiers: ["right_option"],
-          repeat: false,
-        },
-        {
-          halt: false,
-          key_code: "i",
-          lazy: true,
-          repeat: false,
-        },
-      ],
-    },
-    a: {
-      to: [
-        {
-          hold_down_milliseconds: 1,
-          key_code: "grave_accent_and_tilde",
-          modifiers: ["right_option"],
-          repeat: false,
-        },
-        {
-          halt: false,
-          key_code: "a",
-          lazy: true,
-          repeat: false,
-        },
-      ],
 
-    },
-    c: {
-      to: [
-        {
-          hold_down_milliseconds: 1,
-          key_code: "c",
-          modifiers: ["right_option"],
-          repeat: false,
-        }
-      ],
-
-    },
 
     spacebar: open(
       "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
@@ -635,6 +576,66 @@ const rules: KarabinerRules[] = [
     // i: {
     //   to: [{ key_code: "page_up" }],
     // },
+    k: {
+      to: [
+        {
+          hold_down_milliseconds: 1,
+          key_code: "k",
+          modifiers: ["right_alt"],
+          repeat: false,
+        },
+        {
+          halt: false,
+          key_code: "k",
+          lazy: true,
+          repeat: false,
+        },
+      ],
+    },
+    i: {
+      to: [
+        {
+          hold_down_milliseconds: 1,
+          key_code: "grave_accent_and_tilde",
+          modifiers: ["right_option"],
+          repeat: false,
+        },
+        {
+          halt: false,
+          key_code: "i",
+          lazy: true,
+          repeat: false,
+        },
+      ],
+    },
+    a: {
+      to: [
+        {
+          hold_down_milliseconds: 1,
+          key_code: "grave_accent_and_tilde",
+          modifiers: ["right_option"],
+          repeat: false,
+        },
+        {
+          halt: false,
+          key_code: "a",
+          lazy: true,
+          repeat: false,
+        },
+      ],
+
+    },
+    c: {
+      to: [
+        {
+          hold_down_milliseconds: 1,
+          key_code: "c",
+          modifiers: ["right_option"],
+          repeat: false,
+        }
+      ],
+
+    },
   }),
 ];
 fs.writeFileSync(
