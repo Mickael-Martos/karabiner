@@ -183,3 +183,26 @@ export function raycast(name: string): LayerCommand {
 export function app(name: string): LayerCommand {
   return open(`-a '${name}.app'`);
 }
+
+/**
+ * Shortcut for "Open an app" command (of which there are a bunch)
+ */
+export function runCall(): LayerCommand {
+  // return open(`-a '${name}.app'`);
+  return {
+    to: [
+      {
+        shell_command: `
+        open -a 'Microsoft Teams.app'
+
+        open -g "raycast://customWindowManagementCommand?&position=centerLeft&relativeWidth=0.6&relativeHeight=1.0"
+
+        open -a 'Obsidian.app'
+
+        open -g "raycast://customWindowManagementCommand?&position=bottomRight&relativeWidth=0.4&relativeHeight=1.0"
+        `,
+      },
+    ],
+    description: `Open call system`,
+  };
+}

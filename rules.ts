@@ -1,6 +1,6 @@
 import fs from "fs";
 import { KarabinerRules } from "./types";
-import { createHyperSubLayers, app, open, raycast } from "./utils";
+import { createHyperSubLayers, app, open, raycast, runCall } from "./utils";
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
@@ -402,13 +402,13 @@ const rules: KarabinerRules[] = [
       to: [
         {
           hold_down_milliseconds: 1,
-          key_code: "non_us_backslash",
+          key_code: "grave_accent_and_tilde",
           modifiers: ["right_option"],
           repeat: false,
         },
         {
           halt: false,
-          key_code: "non_us_backslash",
+          key_code: "i",
           lazy: true,
           repeat: false,
         },
@@ -418,17 +418,29 @@ const rules: KarabinerRules[] = [
       to: [
         {
           hold_down_milliseconds: 1,
-          key_code: "non_us_backslash",
+          key_code: "grave_accent_and_tilde",
           modifiers: ["right_option"],
           repeat: false,
         },
         {
           halt: false,
-          key_code: "non_us_backslash",
+          key_code: "a",
           lazy: true,
           repeat: false,
         },
       ],
+
+    },
+    c: {
+      to: [
+        {
+          hold_down_milliseconds: 1,
+          key_code: "c",
+          modifiers: ["right_option"],
+          repeat: false,
+        }
+      ],
+
     },
 
     spacebar: open(
@@ -444,15 +456,16 @@ const rules: KarabinerRules[] = [
     },
     // o = "Open" applications
     semicolon: {
+      // v: runCall(),
       v: app("Visual Studio Code"),
       o: app("Obsidian"),
       s: app("Arc"),
-      m: app("Morgen"),
+      // m: app("Morgen"),
       g: app("Discord"),
       w: app("Warp"),
-      j: app("Anki"),
+      // j: app("Anki"),
       t: app("Teams"),
-      n: app("Docker"),
+      // n: app("Docker"),
       // Open todo list managed via *H*ypersonic
       // h: open(
       //   "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
@@ -464,7 +477,7 @@ const rules: KarabinerRules[] = [
       d: app("Spotify"),
       h: app("Dashlane"),
       b: app("Beeper"),
-      c: app("ClickUp"),
+      c: app("Akiflow"),
 
       // "W"hatsApp has been replaced by Texts
       l: open(

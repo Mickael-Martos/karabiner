@@ -536,7 +536,7 @@
                 "to": [
                   {
                     "hold_down_milliseconds": 1,
-                    "key_code": "non_us_backslash",
+                    "key_code": "grave_accent_and_tilde",
                     "modifiers": [
                       "right_option"
                     ],
@@ -544,7 +544,7 @@
                   },
                   {
                     "halt": false,
-                    "key_code": "non_us_backslash",
+                    "key_code": "i",
                     "lazy": true,
                     "repeat": false
                   }
@@ -575,7 +575,7 @@
                 "to": [
                   {
                     "hold_down_milliseconds": 1,
-                    "key_code": "non_us_backslash",
+                    "key_code": "grave_accent_and_tilde",
                     "modifiers": [
                       "right_option"
                     ],
@@ -583,7 +583,7 @@
                   },
                   {
                     "halt": false,
-                    "key_code": "non_us_backslash",
+                    "key_code": "a",
                     "lazy": true,
                     "repeat": false
                   }
@@ -591,6 +591,39 @@
                 "type": "basic",
                 "from": {
                   "key_code": "a",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Hyper Key + c",
+            "manipulators": [
+              {
+                "to": [
+                  {
+                    "hold_down_milliseconds": 1,
+                    "key_code": "c",
+                    "modifiers": [
+                      "right_option"
+                    ],
+                    "repeat": false
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "c",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -680,6 +713,11 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_c",
                     "value": 0
                   },
                   {
@@ -860,6 +898,11 @@
                   },
                   {
                     "type": "variable_if",
+                    "name": "hyper_sublayer_c",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
                     "name": "hyper_sublayer_spacebar",
                     "value": 0
                   },
@@ -965,30 +1008,6 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Morgen.app'"
-                  }
-                ],
-                "description": "Open -a 'Morgen.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "m",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_semicolon",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
                     "shell_command": "open -a 'Discord.app'"
                   }
                 ],
@@ -1037,30 +1056,6 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Anki.app'"
-                  }
-                ],
-                "description": "Open -a 'Anki.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "j",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_semicolon",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
                     "shell_command": "open -a 'Teams.app'"
                   }
                 ],
@@ -1068,30 +1063,6 @@
                 "type": "basic",
                 "from": {
                   "key_code": "t",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_semicolon",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Docker.app'"
-                  }
-                ],
-                "description": "Open -a 'Docker.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "n",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -1205,10 +1176,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'ClickUp.app'"
+                    "shell_command": "open -a 'Akiflow.app'"
                   }
                 ],
-                "description": "Open -a 'ClickUp.app'",
+                "description": "Open -a 'Akiflow.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "c",
@@ -1296,6 +1267,11 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_c",
                     "value": 0
                   },
                   {
@@ -1831,6 +1807,11 @@
                   },
                   {
                     "type": "variable_if",
+                    "name": "hyper_sublayer_c",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
                     "name": "hyper_sublayer_spacebar",
                     "value": 0
                   },
@@ -2075,6 +2056,11 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_c",
                     "value": 0
                   },
                   {
