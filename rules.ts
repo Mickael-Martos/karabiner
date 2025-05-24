@@ -1,6 +1,6 @@
 import fs from "fs";
 import { KarabinerRules } from "./types";
-import { createHyperSubLayers, app, open, raycast, runCall } from "./utils";
+import { createHyperSubLayers, app, open, raycast } from "./utils";
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
@@ -382,48 +382,61 @@ const rules: KarabinerRules[] = [
     ],
   },
   ...createHyperSubLayers({
-
-
-    spacebar: open(
-      "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
-    ),
+    // spacebar: open(
+    //   "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
+    // ),
     // b = "B"rowse
     b: {
-      t: open("https://twitter.com"),
+      m: open(
+        "https://vosker.sharepoint.com/sites/MaviechezVOSKER2?xsdata=MDV8MDJ8fGVkOTQxOGRmMjk4MjQxNDNkZmU5MDhkYzdmZGY5Mzg4fDc3OWRkOGNlYjMxZjQ3ZjE4OGQ2OTk0MGFkYjY1YzUzfDB8MHw2Mzg1MjU4NDU0MDk0MjMzMzd8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKV0lqb2lNQzR3TGpBd01EQWlMQ0pRSWpvaVYybHVNeklpTENKQlRpSTZJazkwYUdWeUlpd2lWMVFpT2pFeGZRPT18MXxMMk5vWVhSekx6RTVPbTFsWlhScGJtZGZUVmRTYUUxNlozcFBWMGwwV1ZkRk0wNXBNREJhYWtreVRGUnJORTV0UlhSWmFrNW9UbnBTYlUweVVUQk9lazVwUUhSb2NtVmhaQzUyTWk5dFpYTnpZV2RsY3k4eE56RTJPVGczTnpNNU5UQXh8YmJkY2JlNjM0YzY2NDUwOWRmZTkwOGRjN2ZkZjkzODh8YjQ5MzE5YWUyNDMwNDVlZDgyYmJjMzI3YjFkYWJhYTI%3d&sdata=Y2NZMy8veEJlYWhyYUZqUjVPcVBQeHRMRGs2Z1NkM2U0a1JybWlJT3RpVT0%3d&ovuser=779dd8ce-b31f-47f1-88d6-9940adb65c53%2cmickael.martos%40vosker.com&OR=Teams-HL&CT=1716987741698&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI1MC8yNDA0MTEyMjMxNSIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3d%3d&SafelinksUrl=https%3a%2f%2fvosker.sharepoint.com%2fsites%2fMaviechezVOSKER2"
+      ),
+
+      y: open(
+        "https://vosker.atlassian.net/jira/software/c/projects/TIO/list?filter=%22assignee%22%20%3D%20%27712020%3Ae2c433c2-7a7a-4268-8899-bb697281f6ec%27"
+      ),
+
       // Quarterly "P"lan
       p: open("https://qrtr.ly/plan"),
-      n: open("https://www.keybr.com/"),
+      // n which is k in colemak for kanban
+      n: open(
+        "https://vosker.atlassian.net/jira/software/c/projects/TIO/boards/61?assignee=712020%3Ae2c433c2-7a7a-4268-8899-bb697281f6ec"
+      ),
+
       l: open("http://localhost:3000"),
     },
     // o = "Open" applications
     semicolon: {
-      // v: runCall(),
       v: app("Visual Studio Code"),
       o: app("Obsidian"),
       s: app("Arc"),
-      // m: app("Morgen"),
-      g: app("Discord"),
+      g: app("Slack"),
       w: app("Warp"),
-      // j: app("Anki"),
-      t: app("Teams"),
-      // n: app("Docker"),
-      // Open todo list managed via *H*ypersonic
-      // h: open(
-      //   "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
-      // ),
-      // z: app("zoom.us"),
-      // "M"essages
-      // m: app("Texts"),
+      j: app("Anki"),
+      f: app("Microsoft Teams"),
+      n: app("Docker"),
+      r: app("Postman"),
+
+      // Microsoft outlook
+      m: app("Microsoft Outlook"),
       e: app("Finder"),
       d: app("Spotify"),
       h: app("Dashlane"),
-      b: app("Beeper"),
       c: app("Akiflow"),
 
+
       // "W"hatsApp has been replaced by Texts
-      l: open(
-        "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
-      ),
+      // l: open(
+      //   "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
+      // ),
+    },
+
+    q: {
+      to: [
+        {
+          key_code: "grave_accent_and_tilde",
+          modifiers: ["left_command"],
+        },
+      ],
     },
 
     // w = "Window" via rectangle.app
@@ -439,19 +452,28 @@ const rules: KarabinerRules[] = [
       y: raycast("raycast/window-management/previous-display"),
       o: raycast("raycast/window-management/next-display"),
       m: raycast("raycast/window-management/maximize"),
-      e: raycast("raycast/window-management/toggle-fullscreen"),
-      // add shortcut to quit all apps
-      // add shortcut to toggle system appearance
-      r: {
-        description: "Window: Hide",
+      b: raycast("raycast/window-management/previous-desktop"),
+      n: raycast("raycast/window-management/next-desktop"),
+      p: {
         to: [
           {
-            key_code: "h",
-            modifiers: ["right_command"],
+            key_code: "grave_accent_and_tilde",
+            modifiers: ["left_command"],
           },
         ],
       },
-      d: {
+      // add shortcut to quit all apps
+      // add shortcut to toggle system appearance
+      // r: {
+      //   description: "Window: Hide",
+      //   to: [
+      //     {
+      //       key_code: "h",
+      //       modifiers: ["right_command"],
+      //     },
+      //   ],
+      // },
+      r: {
         description: "close window",
         to: [
           {
@@ -478,24 +500,24 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      n: {
-        description: "Window: Next Window",
-        to: [
-          {
-            key_code: "grave_accent_and_tilde",
-            modifiers: ["right_command"],
-          },
-        ],
-      },
-      b: {
-        description: "Window: Back",
-        to: [
-          {
-            key_code: "open_bracket",
-            modifiers: ["right_command"],
-          },
-        ],
-      },
+      // n: {
+      //   description: "Window: Next Window",
+      //   to: [
+      //     {
+      //       key_code: "grave_accent_and_tilde",
+      //       modifiers: ["right_command"],
+      //     },
+      //   ],
+      // },
+      // b: {
+      //   description: "Window: Back",
+      //   to: [
+      //     {
+      //       key_code: "open_bracket",
+      //       modifiers: ["right_command"],
+      //     },
+      //   ],
+      // },
       // Note: No literal connection. Both f and n are already taken.
       //   m: {
       //     description: "Window: Forward",
@@ -519,7 +541,7 @@ const rules: KarabinerRules[] = [
 
     // r = "Raycast"
     s: {
-      a: raycast("raycast/system/toggle-system-appearance"),
+      t: raycast("raycast/system/toggle-system-appearance"),
       n: open("raycast://script-commands/dismiss-notifications"),
       k: open(
         "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
@@ -527,10 +549,96 @@ const rules: KarabinerRules[] = [
       v: open("raycast://extensions/raycast/system/open-camera"),
       p: open("raycast://extensions/raycast/raycast/confetti"),
       c: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
+      j: open("raycast://extensions/raycast/raycast-notes/raycast-notes"),
+
+      e: open("raycast://ai-commands/fix-spelling-and-grammar"),
       h: open(
         "raycast://extensions/raycast/clipboard-history/clipboard-history"
       ),
+      r: open("raycast://extensions/MarkusLanger/vscode-project-manager/search-project-manager-projects"),
     },
+
+
+    // // s = "System"
+    d: {
+      u: {
+        to: [
+          {
+            key_code: "volume_increment",
+          },
+        ],
+      },
+      j: {
+        to: [
+          {
+            key_code: "volume_decrement",
+          },
+        ],
+      },
+      i: {
+        to: [
+          {
+            key_code: "display_brightness_increment",
+          },
+        ],
+      },
+      k: {
+        to: [
+          {
+            key_code: "display_brightness_decrement",
+          },
+        ],
+      },
+      l: {
+        to: [
+          {
+            key_code: "q",
+            modifiers: ["right_control", "right_command"],
+          },
+        ],
+      },
+      p: {
+        to: [
+          {
+            key_code: "play_or_pause",
+          },
+        ],
+      },
+      semicolon: {
+        to: [
+          {
+            key_code: "fastforward",
+          },
+        ],
+      },
+      e: {
+        to: [
+          {
+            // Emoji picker
+            key_code: "spacebar",
+            modifiers: ["right_control", "right_command"],
+          },
+        ],
+      },
+      // Turn on Elgato KeyLight
+      y: {
+        to: [
+          {
+            shell_command: `curl -H 'Content-Type: application/json' --request PUT --data '{ "numberOfLights": 1, "lights": [ { "on": 1, "brightness": 100, "temperature": 215 } ] }' http://192.168.8.84:9123/elgato/lights`,
+          },
+        ],
+      },
+      h: {
+        to: [
+          {
+            shell_command: `curl -H 'Content-Type: application/json' --request PUT --data '{ "numberOfLights": 1, "lights": [ { "on": 0, "brightness": 100, "temperature": 215 } ] }' http://192.168.8.84:9123/elgato/lights`,
+          },
+        ],
+      },
+      // "D"o not disturb toggle
+      d: open(`raycast://extensions/yakitrak/do-not-disturb/toggle`),
+    },
+
 
     // f (t) for timers
     f: {
@@ -545,20 +653,49 @@ const rules: KarabinerRules[] = [
     },
 
     // v = "moVe" which isn't "m" because we want it to be on the left hand
-    // so that hjkl work like they do in vim
 
-    // h: {
-    //   to: [{ key_code: "left_arrow" }],
-    // },
-    // j: {
-    //   to: [{ key_code: "down_arrow" }],
-    // },
-    // k: {
-    //   to: [{ key_code: "up_arrow" }],
-    // },
-    // l: {
-    //   to: [{ key_code: "right_arrow" }],
-    // },
+    v: {
+      j: {
+        to: [{ key_code: "left_arrow" }],
+      },
+      k: {
+        to: [{ key_code: "down_arrow" }],
+      },
+      l: {
+        to: [{ key_code: "up_arrow" }],
+      },
+      semicolon: {
+        to: [{ key_code: "right_arrow" }],
+      },
+      m: {
+        to: [
+          {
+            key_code: "spacebar",
+            modifiers: [
+              "left_shift",
+              "left_command"
+            ]
+          }
+        ]
+      },
+      comma: {
+        to: [{ key_code: "l", modifiers: ["left_shift", "left_command"] }],
+      },
+      n: {
+        to: [{ key_code: "q", modifiers: ["control", "option"] }],
+      },
+    },
+    m: {
+      to: [
+        {
+          key_code: "spacebar",
+          modifiers: [
+            "left_shift",
+            "left_command"
+          ]
+        }
+      ]
+    },
     // // // Magicmove via homerow.app
     // m: {
     //   to: [{ key_code: "7", modifiers: ["left_shift"] }],
@@ -576,6 +713,7 @@ const rules: KarabinerRules[] = [
     // i: {
     //   to: [{ key_code: "page_up" }],
     // },
+
     k: {
       to: [
         {
@@ -623,7 +761,6 @@ const rules: KarabinerRules[] = [
           repeat: false,
         },
       ],
-
     },
     c: {
       to: [
@@ -632,9 +769,8 @@ const rules: KarabinerRules[] = [
           key_code: "c",
           modifiers: ["right_option"],
           repeat: false,
-        }
+        },
       ],
-
     },
   }),
 ];
@@ -659,82 +795,3 @@ fs.writeFileSync(
   )
 );
 
-// // s = "System"
-// s: {
-//   u: {
-//     to: [
-//       {
-//         key_code: "volume_increment",
-//       },
-//     ],
-//   },
-//   j: {
-//     to: [
-//       {
-//         key_code: "volume_decrement",
-//       },
-//     ],
-//   },
-//   i: {
-//     to: [
-//       {
-//         key_code: "display_brightness_increment",
-//       },
-//     ],
-//   },
-//   k: {
-//     to: [
-//       {
-//         key_code: "display_brightness_decrement",
-//       },
-//     ],
-//   },
-//   l: {
-//     to: [
-//       {
-//         key_code: "q",
-//         modifiers: ["right_control", "right_command"],
-//       },
-//     ],
-//   },
-//   p: {
-//     to: [
-//       {
-//         key_code: "play_or_pause",
-//       },
-//     ],
-//   },
-//   semicolon: {
-//     to: [
-//       {
-//         key_code: "fastforward",
-//       },
-//     ],
-//   },
-//   e: {
-//     to: [
-//       {
-//         // Emoji picker
-//         key_code: "spacebar",
-//         modifiers: ["right_control", "right_command"],
-//       },
-//     ],
-//   },
-//   // Turn on Elgato KeyLight
-//   y: {
-//     to: [
-//       {
-//         shell_command: `curl -H 'Content-Type: application/json' --request PUT --data '{ "numberOfLights": 1, "lights": [ { "on": 1, "brightness": 100, "temperature": 215 } ] }' http://192.168.8.84:9123/elgato/lights`,
-//       },
-//     ],
-//   },
-//   h: {
-//     to: [
-//       {
-//         shepll_command: `curl -H 'Content-Type: application/json' --request PUT --data '{ "numberOfLights": 1, "lights": [ { "on": 0, "brightness": 100, "temperature": 215 } ] }' http://192.168.8.84:9123/elgato/lights`,
-//       },
-//     ],
-//   },
-//   // "D"o not disturb toggle
-//   d: open(`raycast://extensions/yakitrak/do-not-disturb/toggle`),
-// },
