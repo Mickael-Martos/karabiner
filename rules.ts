@@ -417,7 +417,7 @@ const rules: KarabinerRules[] = [
       r: app("Postman"),
 
       // Microsoft outlook
-      m: app("Microsoft Outlook"),
+      m: app("Gmail"),
       e: app("Finder"),
       d: app("Spotify"),
       h: app("Dashlane"),
@@ -430,14 +430,37 @@ const rules: KarabinerRules[] = [
       // ),
     },
 
+    l: {
+      v: app("Visual Studio Code"),
+      o: app("Obsidian"),
+      c: app("Cursor"),
+    },
+    j : {
+      d : app('Slack'),
+      g : app('google chat'),
+      f : app('Microsoft Teams')
+    },
+
+    // for ANSI KEYBOARD
+    // q: {
+    //   to: [
+    //     {
+    //       key_code: "grave_accent_and_tilde",
+    //       modifiers: ["left_command"],
+    //     },
+    //   ],
+    // },
+
+    // for ISO KEYBOARD
     q: {
       to: [
         {
-          key_code: "grave_accent_and_tilde",
+          key_code: "non_us_backslash",
           modifiers: ["left_command"],
         },
       ],
     },
+
 
     // w = "Window" via rectangle.app
     w: {
@@ -449,11 +472,11 @@ const rules: KarabinerRules[] = [
       j: raycast("raycast/window-management/bottom-half"),
       k: raycast("raycast/window-management/top-half"),
       l: raycast("raycast/window-management/right-half"),
-      y: raycast("raycast/window-management/previous-display"),
-      o: raycast("raycast/window-management/next-display"),
+      o: raycast("raycast/window-management/move-to-next-display"),
       m: raycast("raycast/window-management/maximize"),
       b: raycast("raycast/window-management/previous-desktop"),
       n: raycast("raycast/window-management/next-desktop"),
+      spacebar: raycast("raycast/window-management/toggle-grid-overlay"),
       p: {
         to: [
           {
@@ -541,24 +564,19 @@ const rules: KarabinerRules[] = [
 
     // r = "Raycast"
     s: {
-      t: raycast("raycast/system/toggle-system-appearance"),
-      n: open("raycast://script-commands/dismiss-notifications"),
-      k: open(
-        "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
-      ),
-      v: open("raycast://extensions/raycast/system/open-camera"),
-      p: open("raycast://extensions/raycast/raycast/confetti"),
-      c: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-      j: open("raycast://extensions/raycast/raycast-notes/raycast-notes"),
-
-      e: open("raycast://ai-commands/fix-spelling-and-grammar"),
-      h: open(
-        "raycast://extensions/raycast/clipboard-history/clipboard-history"
-      ),
-      r: open("raycast://extensions/MarkusLanger/vscode-project-manager/search-project-manager-projects"),
-    },
-
-
+        n: raycast("raycast/system-actions/dismiss-notifications"),
+        k: raycast("raycast/emoji-symbols/search-emoji-symbols"),
+        v: raycast("raycast/raycast/open-camera"),
+        p: raycast("raycast/raycast/confetti"),
+        c: raycast("raycast/ai/ai-chat"),
+        j: raycast("raycast/raycast-notes/raycast-notes"),
+        e: raycast("raycast/ai/quick-fix"),
+        h: raycast("raycast/clipboard-history/clipboard-history"),
+        r: raycast("MarkusLanger/vscode-project-manager/search-project-manager-projects"),
+        d: raycast("raycast/snippets/search-snippets"),
+        t: raycast('raycast/quicklinks/search-quicklinks'),
+        spacebar: raycast('raycast/dictation/dictate')
+      },
     // // s = "System"
     d: {
       u: {
@@ -636,21 +654,10 @@ const rules: KarabinerRules[] = [
         ],
       },
       // "D"o not disturb toggle
-      d: open(`raycast://extensions/yakitrak/do-not-disturb/toggle`),
+      g: raycast(`yakitrak/do-not-disturb/toggle`),
+      f: raycast("raycast/system-actions/toggle-system-appearance"),
     },
 
-
-    // f (t) for timers
-    f: {
-      d: open("raycast://extensions/ThatNerd/timers/dismissTimerAlert"),
-      n: open("raycast://extensions/ThatNerd/timers/startCustomTimer"),
-      m: open("raycast://extensions/ThatNerd/timers/manageTimers"),
-      y: open("raycast://extensions/ThatNerd/timers/start5MinuteTimer"),
-      u: open("raycast://extensions/ThatNerd/timers/start15MinuteTimer"),
-      i: open("raycast://extensions/ThatNerd/timers/start30MinuteTimer"),
-      o: open("raycast://extensions/ThatNerd/timers/start60MinuteTimer"),
-      e: open("raycast://extensions/ThatNerd/timers/stopRunningTimer"),
-    },
 
     // v = "moVe" which isn't "m" because we want it to be on the left hand
 
@@ -686,16 +693,18 @@ const rules: KarabinerRules[] = [
       },
     },
     m: {
-      to: [
-        {
-          key_code: "spacebar",
-          modifiers: [
-            "left_shift",
-            "left_command"
-          ]
-        }
+  to: [
+    {
+      key_code: "m",
+      modifiers: [
+        "left_control",
+        "left_option",
+        "left_command"
       ]
-    },
+    }
+  ]
+}
+,
     // // // Magicmove via homerow.app
     // m: {
     //   to: [{ key_code: "7", modifiers: ["left_shift"] }],
@@ -727,7 +736,7 @@ const rules: KarabinerRules[] = [
           key_code: "k",
           lazy: true,
           repeat: false,
-        },
+        }
       ],
     },
     i: {
@@ -746,11 +755,29 @@ const rules: KarabinerRules[] = [
         },
       ],
     },
-    a: {
+    // ANSI KEYBOARD
+    // a: {
+    //   to: [
+    //     {
+    //       hold_down_milliseconds: 1,
+    //       key_code: "grave_accent_and_tilde",
+    //       modifiers: ["right_option"],
+    //       repeat: false,
+    //     },
+    //     {
+    //       halt: false,
+    //       key_code: "a",
+    //       lazy: true,
+    //       repeat: false,
+    //     },
+    //   ],
+    // },
+    // ISO KEYBOARD
+      a: {
       to: [
         {
           hold_down_milliseconds: 1,
-          key_code: "grave_accent_and_tilde",
+          key_code: "non_us_backslash",
           modifiers: ["right_option"],
           repeat: false,
         },
@@ -762,6 +789,7 @@ const rules: KarabinerRules[] = [
         },
       ],
     },
+
     c: {
       to: [
         {

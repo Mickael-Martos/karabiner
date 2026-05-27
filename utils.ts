@@ -168,14 +168,11 @@ export function open(what: string): LayerCommand {
  */
 export function raycast(name: string): LayerCommand {
   return {
-    to: [
-      {
-        shell_command: `open -g raycast://extensions/${name}`,
-      },
-    ],
-    description: `Window: ${name}`,
+    to: [{ shell_command: `open -g raycast-x://extensions/${name}` }],
+    description: `Raycast: ${name}`,
   };
 }
+
 
 /**
  * Shortcut for "Open an app" command (of which there are a bunch)
